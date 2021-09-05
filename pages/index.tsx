@@ -42,16 +42,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <script>
-          {() => {
-            // CSRでscriptを実行するために行う
-            if (!window.MediaRecorder) {
-              document.write(
-                decodeURI('%3Cscript defer src="/polyfill.js">%3C/script>')
-              );
-            }
-          }}
-        </script>
+
 
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -77,11 +68,15 @@ export default function Home() {
               Stop
             </button>
           </div>
+
+          
           <div className={styles.card}>
             <audio src={mediaBlobUrl ? mediaBlobUrl : ''} controls />
           </div>
 
           <div className={styles.card}>
+          <p>{status}</p>
+          <br/>
             {isNowRecording ? recImage : noRecImage}
           </div>
         </div>
