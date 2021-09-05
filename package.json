@@ -8,8 +8,6 @@
     "lint": "next lint",
     "build": "prettier --write 'pages/**/*.{ts,tsx}' && next build && next export",
     "format": "prettier --write 'pages/**/*.{ts,tsx}'"
-
-
   },
   "dependencies": {
     "@aws-sdk/client-transcribe": "^3.29.0",

@@ -64,16 +64,16 @@ export default function Home() {
 
         <div className={styles.grid}>
           <div className={styles.card}>
-            <button onClick={onStart} type="button" className="m-1">
+            <button onClick={onStart} className="m-1">
               Record
             </button>
-            <button onClick={onPause} type="button" className="m-1">
+            <button onClick={onPause} className="m-1">
               Pause
             </button>
-            <button onClick={onResume} type="button" className="m-1">
+            <button onClick={onResume} className="m-1">
               Resume
             </button>
-            <button onClick={onStop} type="button" className="m-1">
+            <button onClick={onStop} className="m-1">
               Stop
             </button>
           </div>
