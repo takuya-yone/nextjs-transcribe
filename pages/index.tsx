@@ -2,11 +2,15 @@ import Head from 'next/head';
 import { useReactMediaRecorder } from 'react-media-recorder';
 import styles from '../styles/Home.module.css';
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 declare const window: Window &
   typeof globalThis & {
     MediaRecorder: any;
   };
+
+const recImage = <img src="/rec.png" alt="recimg" height={400} />;
+const noRecImage = <img src="/notrec.png" alt="recimg" height={400} />;
 
 export default function Home() {
   const {
@@ -55,13 +59,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">RecTrans Web!</a>
         </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
 
         <div className={styles.grid}>
           <div className={styles.card}>
@@ -83,21 +82,10 @@ export default function Home() {
           </div>
 
           <div className={styles.card}>
-            {isNowRecording ? <p>録音中</p> : <p>録音可能</p>}
+            {isNowRecording ? recImage : noRecImage}
           </div>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
     </div>
   );
 }
