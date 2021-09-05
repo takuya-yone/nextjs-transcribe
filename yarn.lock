@@ -1147,6 +1147,11 @@ astral-regex@^2.0.0:
   resolved "https://registry.yarnpkg.com/astral-regex/-/astral-regex-2.0.0.tgz#483143c567aeed4785759c0865786dc77d7d2e31"
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
 
+audio-recorder-polyfill@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/audio-recorder-polyfill/-/audio-recorder-polyfill-0.4.1.tgz#4290eca3d8edf49eb6daba59592aacf357b6e5b7"
+  integrity sha512-SS4qVOzuVwlS/tjQdd0uR+9cCKBTkx4jsAdjM+rMNqoTEWf6bMnBSTfv+FO4Zn9ngxviJOxhkgRWWXsAMqM96Q==
+
 available-typed-arrays@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
@@ -3233,6 +3238,11 @@ react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-media-recorder@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/react-media-recorder/-/react-media-recorder-1.5.0.tgz#8cc86ba61c8bd1a94ff1bc2fdf6a8ad203b9c05e"
+  integrity sha512-Wosm8/Wg/VG3CP56yOOkdFCwcbVPjFLPu+aKkyCzxGCK+ol2QZMemNYLJC5KU5jZ7nHlpHq7YEOiVi17vmqnPQ==
 
 react-refresh@0.8.3:
   version "0.8.3"
