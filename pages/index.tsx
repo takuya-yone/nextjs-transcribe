@@ -1,15 +1,14 @@
-import Head from 'next/head'
-import { useReactMediaRecorder} from 'react-media-recorder';
-import styles from '../styles/Home.module.css'
-import React, {useState} from 'react';
+import Head from 'next/head';
+import { useReactMediaRecorder } from 'react-media-recorder';
+import styles from '../styles/Home.module.css';
+import React, { useState } from 'react';
 
 declare const window: Window &
-   typeof globalThis & {
-    MediaRecorder: any
-   };
+  typeof globalThis & {
+    MediaRecorder: any;
+  };
 
 export default function Home() {
-
   const {
     status,
     startRecording,
@@ -19,39 +18,35 @@ export default function Home() {
     mediaBlobUrl,
   } = useReactMediaRecorder({ audio: true });
 
-  const [isNowRecording, setIsNowRecording] = useState(false)
-
+  const [isNowRecording, setIsNowRecording] = useState(false);
 
   function onStart() {
-    startRecording()
-    setIsNowRecording(true)
+    startRecording();
+    setIsNowRecording(true);
   }
   function onPause() {
-    pauseRecording()
+    pauseRecording();
   }
   function onResume() {
-    resumeRecording()
+    resumeRecording();
   }
   function onStop() {
-    stopRecording()
-    setIsNowRecording(false)
+    stopRecording();
+    setIsNowRecording(false);
   }
-
 
   return (
     <div className={styles.container}>
       <Head>
         <script>
-          {
-            () => {
-              // CSRでscriptを実行するために行う
-              if (!window.MediaRecorder) {
-                document.write(
-                  decodeURI('%3Cscript defer src="/polyfill.js">%3C/script>')
-                )
-              }
+          {() => {
+            // CSRでscriptを実行するために行う
+            if (!window.MediaRecorder) {
+              document.write(
+                decodeURI('%3Cscript defer src="/polyfill.js">%3C/script>')
+              );
             }
-          }
+          }}
         </script>
 
         <title>Create Next App</title>
@@ -63,7 +58,6 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
@@ -71,17 +65,22 @@ export default function Home() {
 
         <div className={styles.grid}>
           <div className={styles.card}>
-            <button onClick={onStart} type="button" className="m-1">Record</button>
-            <button onClick={onPause} type="button" className="m-1">Pause</button>
-            <button onClick={onResume} type="button" className="m-1">Resume</button>
-            <button onClick={onStop} type="button" className="m-1">Stop</button>
+            <button onClick={onStart} type="button" className="m-1">
+              Record
+            </button>
+            <button onClick={onPause} type="button" className="m-1">
+              Pause
+            </button>
+            <button onClick={onResume} type="button" className="m-1">
+              Resume
+            </button>
+            <button onClick={onStop} type="button" className="m-1">
+              Stop
+            </button>
           </div>
           <div className={styles.card}>
-
-            <audio src={mediaBlobUrl? mediaBlobUrl:''} controls />
+            <audio src={mediaBlobUrl ? mediaBlobUrl : ''} controls />
           </div>
-
-
 
           <div className={styles.card}>
             {isNowRecording ? <p>録音中</p> : <p>録音可能</p>}
@@ -100,5 +99,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
+  );
 }
