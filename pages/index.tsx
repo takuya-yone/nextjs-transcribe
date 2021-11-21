@@ -42,8 +42,6 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-
-
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -69,14 +67,13 @@ export default function Home() {
             </button>
           </div>
 
-          
           <div className={styles.card}>
             <audio src={mediaBlobUrl ? mediaBlobUrl : ''} controls />
           </div>
 
           <div className={styles.card}>
-          <p>{status}</p>
-          <br/>
+            <p>{status}</p>
+            <br />
             {isNowRecording ? recImage : noRecImage}
           </div>
         </div>
