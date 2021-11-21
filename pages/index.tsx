@@ -4,11 +4,6 @@ import styles from '../styles/Home.module.css';
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-declare const window: Window &
-  typeof globalThis & {
-    MediaRecorder: any;
-  };
-
 const recImage = <img src="/rec.png" alt="recimg" height={400} />;
 const noRecImage = <img src="/notrec.png" alt="recimg" height={400} />;
 
